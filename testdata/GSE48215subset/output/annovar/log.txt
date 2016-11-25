@@ -1,0 +1,94 @@
+started 2016-11-25 16:25:10
+running sample: /home/brb/testdata/GSE48215subset/output/bt20_raw.vcf
+Lines   total/split/realigned/skipped:	331/1/0/0
+Lines   total/split/realigned/skipped:	332/0/15/0
+NOTICE: Web-based checking to see whether ANNOVAR new version is available ... Done
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_refGene.txt.gz ... OK
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_refGeneMrna.fa.gz ... OK
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_refGeneVersion.txt.gz ... OK
+NOTICE: Uncompressing downloaded files
+NOTICE: Finished downloading annotation files for hg19 build version, with files saved at the '/home/brb/annovar/humandb' directory
+NOTICE: Web-based checking to see whether ANNOVAR new version is available ... Done
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_knownGene.txt.gz ... OK
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_kgXref.txt.gz ... OK
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_knownGeneMrna.fa.gz ... OK
+NOTICE: Uncompressing downloaded files
+NOTICE: Finished downloading annotation files for hg19 build version, with files saved at the '/home/brb/annovar/humandb' directory
+NOTICE: Web-based checking to see whether ANNOVAR new version is available ... Done
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_ensGene.txt.gz ... OK
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_ensGeneMrna.fa.gz ... OK
+NOTICE: Uncompressing downloaded files
+NOTICE: Finished downloading annotation files for hg19 build version, with files saved at the '/home/brb/annovar/humandb' directory
+NOTICE: Web-based checking to see whether ANNOVAR new version is available ... Done
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_dbnsfp30a.txt.gz ... OK
+NOTICE: Downloading annotation database http://www.openbioinformatics.org/annovar/download/hg19_dbnsfp30a.txt.idx.gz ... OK
+NOTICE: Uncompressing downloaded files
+NOTICE: Finished downloading annotation files for hg19 build version, with files saved at the '/home/brb/annovar/humandb' directory
+NOTICE: Finished reading 178 lines from VCF file
+NOTICE: A total of 139 locus in VCF file passed QC threshold, representing 127 SNPs (80 transitions and 47 transversions) and 12 indels/substitutions
+NOTICE: Finished writing 127 SNP genotypes (80 transitions and 47 transversions) and 12 indels/substitutions for 1 sample
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=nonsyn_splicing
+
+NOTICE: Running step 1 with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refgene -outfile /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1 /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step0.varlist /home/brb/annovar/humandb/>
+NOTICE: Output files were written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.variant_function, /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.exonic_variant_function
+NOTICE: Reading gene annotation from /home/brb/annovar/humandb/hg19_refGene.txt ... Done with 52068 transcripts (including 11837 without coding sequence annotation) for 26464 unique genes
+NOTICE: Processing next batch with 139 unique variants in 139 input lines
+NOTICE: Reading FASTA sequences from /home/brb/annovar/humandb/hg19_refGeneMrna.fa ... Done with 52 sequences
+WARNING: A total of 356 sequences will be ignored due to lack of correct ORF annotation
+NOTICE: Variants with invalid input format were written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.invalid_input
+NOTICE: After step 1, 20 variants are left in analysis.
+-----------------------------------------------------------------
+NOTICE: Processing operation=m protocol=dominant
+
+NOTICE: Running step 8 with system command <fgrep -f /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.varlist /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.exonic_variant_function | fgrep -v -w UNKNOWN | cut -f 2- > /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.varlist;cut -f 3- /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.varlist > /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.temp;fgrep -v -f /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.temp /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.varlist > /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.temp1;fgrep -f /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.temp1 /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step1.variant_function | fgrep splicing >> /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.varlist;>
+
+NOTICE: a list of 17 potentially important genes and the number of deleterious alleles in them are written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.step2.genelist
+
+NOTICE: Running with system command <convert2annovar.pl -includeinfo -allsample -withfreq -format vcf4 /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/reduced.vcf > /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.avinput>
+NOTICE: Finished reading 59 lines from VCF file
+NOTICE: A total of 20 locus in VCF file passed QC threshold, representing 20 SNPs (17 transitions and 3 transversions) and 0 indels/substitutions
+NOTICE: Finished writing allele frequencies based on 20 SNP genotypes (17 transitions and 3 transversions) and 0 indels/substitutions for 1 samples
+
+NOTICE: Running with system command </home/brb/annovar/table_annovar.pl /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.avinput /home/brb/annovar/humandb/ -buildver hg19 -outfile /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw -remove -protocol refGene,dbnsfp30a -operation g,f -nastring . -otherinfo>
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.refGene -exonsort /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.avinput /home/brb/annovar/humandb/>
+NOTICE: Output files were written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.refGene.variant_function, /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.refGene.exonic_variant_function
+NOTICE: Reading gene annotation from /home/brb/annovar/humandb/hg19_refGene.txt ... Done with 52068 transcripts (including 11837 without coding sequence annotation) for 26464 unique genes
+NOTICE: Processing next batch with 20 unique variants in 20 input lines
+NOTICE: Reading FASTA sequences from /home/brb/annovar/humandb/hg19_refGeneMrna.fa ... Done with 32 sequences
+WARNING: A total of 356 sequences will be ignored due to lack of correct ORF annotation
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=dbnsfp30a
+NOTICE: Finished reading 34 column headers for '-dbtype dbnsfp30a'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype dbnsfp30a -buildver hg19 -outfile /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.avinput /home/brb/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype dbnsfp30a is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.hg19_dbnsfp30a_dropped, other variants are written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.hg19_dbnsfp30a_filtered
+NOTICE: Processing next batch with 20 unique variants in 20 input lines
+NOTICE: Database index loaded. Total number of bins is 548895 and the number of bins to be scanned is 20
+NOTICE: Scanning filter database /home/brb/annovar/humandb/hg19_dbnsfp30a.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.hg19_multianno.txt
+NOTICE: Reading from /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.hg19_multianno.txt
+-----------------------------------------------------------------
+NOTICE: VCF output is written to /home/brb/testdata/GSE48215subset/output/annovar/tmp/tmp_bt20_raw/bt20_raw.hg19_multianno.vcf
+/home/brb/testdata/GSE48215subset/output/bt20_raw.vcf contains 1610 lines where each line corresponds to one or multiple variants.
+There are 331 variants after pre-filtering.
+There are 332 variants after decomposing and normalizing variants.
+There are 232 variants (out of 332 variants) that are reported by dbSNP.
+There are 45 variants (out of 332 variants) that are reported by COSMIC. 
+There are 39 variants (out of 332 variants) that are reported by both dbSNP build 144 and COSMIC v74.
+After removing these variants reported in dbSNP database and keeping these variants reported in COSMIC database, there are 139 variants left for analysis.
+There are 20 variants (out of 139 variants) that are nonsynonymous or splicing ones, which are kept for further analysis.
+There are 18 variants (out of 20 variants) that are reported by COSMIC v74.
+There are 0 variants (out of 20 variants) that are splicing.
+There are 0 variants (out of 20 variants) that are frameshift deletion.
+There are 0 variants (out of 20 variants) that are frameshift insersion.
+There are 0 variants (out of 20 variants) that are stoploss.
+There are 0 variants (out of 20 variants) that are stopgain.
+There are 20 variants (out of 20 variants) that are nonsynonymous.
+An annotation table associated with 20 variants is saved in /home/brb/testdata/GSE48215subset/output/annovar/bt20_raw_annoTable.txt, and a vcf file with annotation information is saved in /home/brb/testdata/GSE48215subset/output/annovar/bt20_raw_annotated.vcf.
+completed 2016-11-25 16:43:32

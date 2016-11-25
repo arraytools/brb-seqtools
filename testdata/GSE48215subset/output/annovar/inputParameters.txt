@@ -1,0 +1,10 @@
+annotationMethod=ANNOVAR
+inputVCFDirectory=/home/brb/testdata/GSE48215subset/output
+inputCosmicVCF=/home/brb/variantAnnoDatabase/cosmic/GRCh37/CosmicCodingMuts.vcf.gz
+inputDbSNPVCF=/home/brb/variantAnnoDatabase/dbsnp/GRCh37/common_all_20160601.vcf.gz
+inputGenomeReference=/home/brb/testdata/hg19/chr1.fa
+inputMinVariantQualityScore=20
+inputMinReadDepth=5
+inputMinMappingQuality=1
+inputGenomeBuild=hg19
+outputDirectory=/home/brb/testdata/GSE48215subset/output/annovar
