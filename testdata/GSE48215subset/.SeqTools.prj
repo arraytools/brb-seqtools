@@ -1,0 +1,13 @@
+[General]
+recentProfileName=UCSC_hg19_chr1
+recentIndexFiles=/home/brb//testdata/hg19
+recentOutputFiles=/home/brb//testdata/GSE48215subset/output
+recentDataTypes=dna
+recentRawDataTypes=fastq
+recentAnalyses=vc
+recentAligner=bwa
+recentMarkDup=yes
+recentVC=samtools
+recentGTFFiles=/home/brb//testdata/hg19/chr1.gtf
+recentIndelReAlignment=no
+recentBQRC=no

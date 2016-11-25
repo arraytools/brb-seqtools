@@ -1,0 +1,2 @@
+LibraryName	LibraryLayout	fastq1	fastq2	ReadGroup	SequencerManufacturer
+bt20	PAIRED	SRR925751_1.fastq	SRR925751_2.fastq	1	illumina	

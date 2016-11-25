@@ -1,0 +1,11 @@
+annotationMethod=SnpEff
+inputVCFDirectory=/home/brb/testdata/GSE48215subset/output
+inputCosmicVCF=/home/brb/variantAnnoDatabase/cosmic/GRCh37/CosmicCodingMuts.vcf.gz
+inputDbSNPVCF=/home/brb/variantAnnoDatabase/dbsnp/GRCh37/common_all_20160601.vcf.gz
+inputGenomeReference=/home/brb/testdata/hg19/chr1.fa
+inputDbNSFPFile=/home/brb/variantAnnoDatabase/dbNSFP/dbNSFP3.2a_hg19.txt.gz
+inputMinVariantQualityScore=20
+inputMinReadDepth=5
+inputMinMappingQuality=1
+inputGenomeBuild=GRCh37.75
+outputDirectory=/home/brb/testdata/GSE48215subset/output/snpeff
