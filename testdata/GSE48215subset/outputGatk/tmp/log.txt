@@ -1,0 +1,262 @@
+bowtie: /opt/SeqTools/bin/bowtie2-2.2.6
+tophat: /opt/SeqTools/bin/tophat-2.1.0.Linux_x86_64
+samtools: /opt/SeqTools/bin/samtools-1.3
+HTSeq: 0.6.1p1
+bt20 2016-11-25 19:16:07
+    sorting bam file
+    indexing bam file
+    marking duplicates
+[Fri Nov 25 19:16:14 EST 2016] picard.sam.markduplicates.MarkDuplicates INPUT=[sorted.bam] OUTPUT=bt20.bam METRICS_FILE=MarkDudup.metrics    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Fri Nov 25 19:16:14 EST 2016] Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14; Picard version: 1.141(8ece590411350163e7689e9e77aab8efcb622170_1447695087) IntelDeflater
+INFO	2016-11-25 19:16:14	MarkDuplicates	Start of doWork freeMemory: 73478744; totalMemory: 75169792; maxMemory: 10379526144
+INFO	2016-11-25 19:16:14	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2016-11-25 19:16:14	MarkDuplicates	Will retain up to 39921254 data points before spilling to disk.
+WARNING	2016-11-25 19:16:14	AbstractOpticalDuplicateFinderCommandLineProgram	Default READ_NAME_REGEX '[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*' did not match read name 'SRR925751.2'.  You may need to specify a READ_NAME_REGEX in order to correctly identify optical duplicates.  Note that this message will not be emitted again even if other read names do not match the regex.
+INFO	2016-11-25 19:16:20	MarkDuplicates	Read 200050 records. 0 pairs never matched.
+INFO	2016-11-25 19:16:21	MarkDuplicates	After buildSortedReadEndLists freeMemory: 477362720; totalMemory: 821919744; maxMemory: 10379526144
+INFO	2016-11-25 19:16:21	MarkDuplicates	Will retain up to 324360192 duplicate indices before spilling to disk.
+INFO	2016-11-25 19:16:39	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2016-11-25 19:16:40	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2016-11-25 19:16:40	MarkDuplicates	Sorting list of duplicate records.
+INFO	2016-11-25 19:16:42	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3644226256; totalMemory: 6274932736; maxMemory: 10379526144
+INFO	2016-11-25 19:16:42	MarkDuplicates	Marking 16224 records as duplicates.
+INFO	2016-11-25 19:16:42	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2016-11-25 19:16:54	MarkDuplicates	Before output close freeMemory: 6238698072; totalMemory: 6274932736; maxMemory: 10379526144
+INFO	2016-11-25 19:16:54	MarkDuplicates	After output close freeMemory: 5622102640; totalMemory: 5654888448; maxMemory: 10379526144
+[Fri Nov 25 19:16:54 EST 2016] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.68 minutes.
+Runtime.totalMemory()=5654888448
+    creating .intervals file for running the GATK pipeline
+INFO  19:17:01,833 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:17:01,844 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  19:17:01,848 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  19:17:01,848 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  19:17:01,848 HelpFormatter - [Fri Nov 25 19:17:01 EST 2016] Executing on Linux 4.4.0-31-generic amd64 
+INFO  19:17:01,849 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14 JdkDeflater 
+INFO  19:17:01,861 HelpFormatter - Program Args: -T RealignerTargetCreator -R /home/brb//testdata/hg19/chr1.fa -o /home/brb/testdata/hg19/BRB-SeqTools_indels_only.intervals -known /home/brb//testdata/hg19/common_all_20160601_1.vcf.gz -nt 1 
+INFO  19:17:01,898 HelpFormatter - Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14. 
+INFO  19:17:01,900 HelpFormatter - Date/Time: 2016/11/25 19:17:01 
+INFO  19:17:01,905 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:17:01,905 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:17:01,997 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  19:17:02,600 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  19:17:03,359 IndexDictionaryUtils - Track known doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  19:17:03,936 GenomeAnalysisEngine - Preparing for traversal 
+INFO  19:17:03,939 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  19:17:03,942 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  19:17:03,948 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  19:17:03,948 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  19:17:34,010 ProgressMeter -   chr1:24203901       2.4E7    30.0 s       1.0 s        9.7%     5.1 m       4.6 m 
+INFO  19:18:04,024 ProgressMeter -   chr1:54688501       5.4E7    60.0 s       1.0 s       21.9%     4.6 m       3.6 m 
+INFO  19:18:34,034 ProgressMeter -   chr1:87289601       8.7E7    90.0 s       1.0 s       35.0%     4.3 m       2.8 m 
+INFO  19:19:04,038 ProgressMeter -  chr1:120759301       1.2E8   120.0 s       1.0 s       48.4%     4.1 m       2.1 m 
+INFO  19:19:34,052 ProgressMeter -  chr1:160916101       1.6E8     2.5 m       0.0 s       64.6%     3.9 m      82.0 s 
+INFO  19:20:04,056 ProgressMeter -  chr1:192717601      1.92E8     3.0 m       0.0 s       77.3%     3.9 m      52.0 s 
+INFO  19:20:34,081 ProgressMeter -  chr1:224686701      2.24E8     3.5 m       0.0 s       90.1%     3.9 m      22.0 s 
+INFO  19:21:00,008 ProgressMeter -            done   2.49250621E8     3.9 m       0.0 s      100.0%     3.9 m       0.0 s 
+INFO  19:21:00,008 ProgressMeter - Total runtime 236.07 secs, 3.93 min, 0.07 hours 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  19:17:03,359 IndexDictionaryUtils - Track known doesn't have a sequence dictionary built in, skipping dictionary validation 
+------------------------------------------------------------------------------------------
+[Fri Nov 25 19:21:00 EST 2016] picard.sam.AddOrReplaceReadGroups INPUT=bt20.bam OUTPUT=rg_added_sorted.bam RGID=1 RGLB=dna RGPL=illumina RGPU=UNKNOWN RGSM=bt20    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Fri Nov 25 19:21:00 EST 2016] Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14; Picard version: 1.141(8ece590411350163e7689e9e77aab8efcb622170_1447695087) IntelDeflater
+INFO	2016-11-25 19:21:01	AddOrReplaceReadGroups	Created read group ID=1 PL=illumina LB=dna SM=bt20
+
+[Fri Nov 25 19:21:08 EST 2016] picard.sam.AddOrReplaceReadGroups done. Elapsed time: 0.13 minutes.
+Runtime.totalMemory()=75038720
+[Fri Nov 25 19:21:09 EST 2016] picard.sam.ReorderSam INPUT=rg_added_sorted.bam OUTPUT=reorder.bam REFERENCE=/home/brb/testdata/hg19/chr1.fa    ALLOW_INCOMPLETE_DICT_CONCORDANCE=false ALLOW_CONTIG_LENGTH_DISCORDANCE=false VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Fri Nov 25 19:21:09 EST 2016] Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14; Picard version: 1.141(8ece590411350163e7689e9e77aab8efcb622170_1447695087) IntelDeflater
+INFO	2016-11-25 19:21:10	ReorderSam	SAM/BAM file
+INFO	2016-11-25 19:21:10	ReorderSam	  SN=%s LN=%d%nchr1249250621
+INFO	2016-11-25 19:21:10	ReorderSam	Reference
+INFO	2016-11-25 19:21:10	ReorderSam	  SN=%s LN=%d%nchr1249250621
+INFO	2016-11-25 19:21:10	ReorderSam	Reordering SAM/BAM file:
+INFO	2016-11-25 19:21:10	ReorderSam	  Reordering read contig chr1 [index=0] to => ref contig chr1 [index=0]
+
+INFO	2016-11-25 19:21:10	ReorderSam	Writing reads...
+INFO	2016-11-25 19:21:10	ReorderSam	  Processing All reads
+INFO	2016-11-25 19:21:16	ReorderSam	Wrote 200064 reads
+[Fri Nov 25 19:21:19 EST 2016] picard.sam.ReorderSam done. Elapsed time: 0.17 minutes.
+Runtime.totalMemory()=339423232
+    running indel realignment
+INFO  19:21:24,960 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:21:24,980 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  19:21:24,981 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  19:21:24,988 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  19:21:24,989 HelpFormatter - [Fri Nov 25 19:21:24 EST 2016] Executing on Linux 4.4.0-31-generic amd64 
+INFO  19:21:24,989 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14 JdkDeflater 
+INFO  19:21:24,995 HelpFormatter - Program Args: -T IndelRealigner -R /home/brb//testdata/hg19/chr1.fa -I split.bam -targetIntervals /home/brb/testdata/hg19/BRB-SeqTools_indels_only.intervals -known /home/brb//testdata/hg19/common_all_20160601_1.vcf.gz -o realigned_reads.bam -allowPotentiallyMisencodedQuals 
+INFO  19:21:24,999 HelpFormatter - Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14. 
+INFO  19:21:24,999 HelpFormatter - Date/Time: 2016/11/25 19:21:24 
+INFO  19:21:25,000 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:21:25,000 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:21:25,251 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  19:21:25,736 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  19:21:25,751 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  19:21:25,808 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.05 
+WARN  19:21:25,956 IndexDictionaryUtils - Track knownAlleles doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  19:21:26,117 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  19:21:26,123 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  19:21:26,124 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  19:21:26,125 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  19:21:26,126 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  19:21:27,310 ReadShardBalancer$1 - Loading BAM index data 
+INFO  19:21:27,312 ReadShardBalancer$1 - Done loading BAM index data 
+DEBUG	2016-11-25 19:21:39	BlockCompressedOutputStream	Using deflater: Deflater
+INFO  19:21:56,146 ProgressMeter -    chr1:1451462         0.0    30.0 s      49.6 w        0.6%    85.9 m      85.4 m 
+INFO  19:22:26,159 ProgressMeter -    chr1:1451462         0.0    60.0 s      99.3 w        0.6%     2.9 h       2.8 h 
+INFO  19:22:45,952 ProgressMeter -            done    200064.0    79.0 s       6.7 m      100.0%    79.0 s       0.0 s 
+INFO  19:22:45,956 ProgressMeter - Total runtime 79.83 secs, 1.33 min, 0.02 hours 
+INFO  19:22:45,965 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 200064 total reads (0.00%) 
+INFO  19:22:45,965 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  19:22:45,966 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  19:21:25,956 IndexDictionaryUtils - Track knownAlleles doesn't have a sequence dictionary built in, skipping dictionary validation 
+------------------------------------------------------------------------------------------
+    base quality score recalibration
+INFO  19:22:51,341 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:22:51,348 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  19:22:51,348 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  19:22:51,349 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  19:22:51,349 HelpFormatter - [Fri Nov 25 19:22:51 EST 2016] Executing on Linux 4.4.0-31-generic amd64 
+INFO  19:22:51,349 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14 JdkDeflater 
+INFO  19:22:51,367 HelpFormatter - Program Args: -T BaseRecalibrator -R /home/brb//testdata/hg19/chr1.fa -I realigned_reads.bam -nct 1 -knownSites /home/brb//testdata/hg19/common_all_20160601_1.vcf.gz -o recal_data.table -allowPotentiallyMisencodedQuals 
+INFO  19:22:51,376 HelpFormatter - Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14. 
+INFO  19:22:51,393 HelpFormatter - Date/Time: 2016/11/25 19:22:51 
+INFO  19:22:51,393 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:22:51,393 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:22:51,446 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  19:22:51,842 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  19:22:52,054 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  19:22:52,134 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.07 
+WARN  19:22:52,355 IndexDictionaryUtils - Track knownSites doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  19:22:52,604 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  19:22:52,621 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  19:22:52,622 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  19:22:52,623 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  19:22:52,623 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  19:22:53,281 BaseRecalibrator - The covariates being used here:  
+INFO  19:22:53,281 BaseRecalibrator - 	ReadGroupCovariate 
+INFO  19:22:53,282 BaseRecalibrator - 	QualityScoreCovariate 
+INFO  19:22:53,282 BaseRecalibrator - 	ContextCovariate 
+INFO  19:22:53,282 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  19:22:53,282 BaseRecalibrator - 	CycleCovariate 
+INFO  19:22:53,294 ReadShardBalancer$1 - Loading BAM index data 
+INFO  19:22:53,312 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  19:23:23,160 ProgressMeter -    chr1:1245129         0.0    30.0 s      50.5 w        0.5%   100.1 m      99.6 m 
+INFO  19:23:53,183 ProgressMeter -    chr1:1896516         0.0    60.0 s     100.1 w        0.8%     2.2 h       2.2 h 
+INFO  19:24:23,212 ProgressMeter -    chr1:2338042    100001.0    90.0 s      15.1 m        0.9%     2.7 h       2.6 h 
+INFO  19:24:30,732 BaseRecalibrator - Calculating quantized quality scores... 
+INFO  19:24:30,831 BaseRecalibrator - Writing recalibration report... 
+INFO  19:24:36,509 BaseRecalibrator - ...done! 
+INFO  19:24:36,510 BaseRecalibrator - BaseRecalibrator was able to recalibrate 162569 reads 
+INFO  19:24:36,511 ProgressMeter -            done    162569.0   103.0 s      10.7 m        1.4%     2.0 h     118.6 m 
+INFO  19:24:36,513 ProgressMeter - Total runtime 103.89 secs, 1.73 min, 0.03 hours 
+INFO  19:24:36,514 MicroScheduler - 37495 reads were filtered out during the traversal out of approximately 200064 total reads (18.74%) 
+INFO  19:24:36,515 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  19:24:36,515 MicroScheduler -   -> 15121 reads (7.56% of total) failing DuplicateReadFilter 
+INFO  19:24:36,515 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  19:24:36,518 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  19:24:36,518 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  19:24:36,518 MicroScheduler -   -> 22346 reads (11.17% of total) failing MappingQualityZeroFilter 
+INFO  19:24:36,519 MicroScheduler -   -> 28 reads (0.01% of total) failing NotPrimaryAlignmentFilter 
+INFO  19:24:36,519 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 1 WARN messages, the first 1 are repeated below.
+WARN  19:22:52,355 IndexDictionaryUtils - Track knownSites doesn't have a sequence dictionary built in, skipping dictionary validation 
+------------------------------------------------------------------------------------------
+INFO  19:24:41,338 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:24:41,340 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  19:24:41,340 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  19:24:41,341 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  19:24:41,342 HelpFormatter - [Fri Nov 25 19:24:41 EST 2016] Executing on Linux 4.4.0-31-generic amd64 
+INFO  19:24:41,342 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14 JdkDeflater 
+INFO  19:24:41,353 HelpFormatter - Program Args: -T PrintReads -R /home/brb//testdata/hg19/chr1.fa -I realigned_reads.bam -nct 1 -BQSR recal_data.table -o recal.bam 
+INFO  19:24:41,357 HelpFormatter - Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14. 
+INFO  19:24:41,360 HelpFormatter - Date/Time: 2016/11/25 19:24:41 
+INFO  19:24:41,361 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:24:41,361 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:24:41,644 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  19:24:45,459 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  19:24:45,566 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  19:24:45,603 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  19:24:45,673 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.07 
+INFO  19:24:45,972 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  19:24:46,008 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  19:24:46,009 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  19:24:46,010 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  19:24:46,010 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  19:24:46,020 ReadShardBalancer$1 - Loading BAM index data 
+INFO  19:24:46,022 ReadShardBalancer$1 - Done loading BAM index data 
+DEBUG	2016-11-25 19:24:55	BlockCompressedOutputStream	Using deflater: Deflater
+INFO  19:25:16,747 ProgressMeter -    chr1:1421965         0.0    30.0 s      50.8 w        0.6%    87.6 m      87.1 m 
+INFO  19:25:31,355 Walker - [REDUCE RESULT] Traversal result is: org.broadinstitute.gatk.engine.io.stubs.SAMFileWriterStub@7831d1aa 
+INFO  19:25:31,393 ProgressMeter -            done    200064.0    45.0 s       3.8 m      100.0%    45.0 s       0.0 s 
+INFO  19:25:31,394 ProgressMeter - Total runtime 45.38 secs, 0.76 min, 0.01 hours 
+INFO  19:25:31,394 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 200064 total reads (0.00%) 
+INFO  19:25:31,394 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  19:25:31,394 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+    calling variants
+INFO  19:25:37,497 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:25:37,508 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.6-0-g89b7209, Compiled 2016/06/01 22:27:29 
+INFO  19:25:37,514 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  19:25:37,514 HelpFormatter - For support and documentation go to https://www.broadinstitute.org/gatk 
+INFO  19:25:37,514 HelpFormatter - [Fri Nov 25 19:25:37 EST 2016] Executing on Linux 4.4.0-31-generic amd64 
+INFO  19:25:37,514 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14 JdkDeflater 
+INFO  19:25:37,526 HelpFormatter - Program Args: -T HaplotypeCaller --genotyping_mode DISCOVERY -R /home/brb//testdata/hg19/chr1.fa -I recal.bam -stand_call_conf 0 -stand_emit_conf 0 -o /home/brb//testdata/GSE48215subset/outputGatk/bt20_raw.vcf -allowPotentiallyMisencodedQuals -nct 1 
+INFO  19:25:37,545 HelpFormatter - Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14. 
+INFO  19:25:37,546 HelpFormatter - Date/Time: 2016/11/25 19:25:37 
+INFO  19:25:37,547 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:25:37,547 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  19:25:37,623 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  19:25:38,527 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 500 
+INFO  19:25:38,544 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  19:25:38,626 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.08 
+INFO  19:25:38,644 HCMappingQualityFilter - Filtering out reads with MAPQ < 20 
+INFO  19:25:38,931 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  19:25:39,211 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  19:25:39,211 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  19:25:39,212 ProgressMeter -                 |      processed |    time |         per 1M |           |   total | remaining 
+INFO  19:25:39,228 ProgressMeter -        Location | active regions | elapsed | active regions | completed | runtime |   runtime 
+INFO  19:25:39,233 HaplotypeCaller - Disabling physical phasing, which is supported only for reference-model confidence output 
+INFO  19:25:39,358 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  19:25:39,359 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  19:25:39,377 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  19:25:39,616 HaplotypeCaller - Using global mismapping rate of 45 => -4.5 in log10 likelihood units 
+Using SSE4.1 accelerated implementation of PairHMM
+INFO  19:25:44,815 VectorLoglessPairHMM - libVectorLoglessPairHMM unpacked successfully from GATK jar file 
+INFO  19:25:44,816 VectorLoglessPairHMM - Using vectorized implementation of PairHMM 
+WARN  19:25:45,047 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper 
+INFO  19:26:09,288 ProgressMeter -     chr1:565512              0.0    30.0 s           49.7 w        0.2%     3.7 h       3.7 h 
+INFO  19:26:39,323 ProgressMeter -    chr1:1289722              0.0    60.0 s           99.4 w        0.5%     3.2 h       3.2 h 
+INFO  19:27:09,341 ProgressMeter -    chr1:2778432              0.0    90.0 s          149.0 w        1.1%     2.2 h       2.2 h 
+INFO  19:27:39,348 ProgressMeter -   chr1:21577648              0.0   120.0 s          198.6 w        8.7%    23.1 m      21.1 m 
+INFO  19:28:09,352 ProgressMeter -   chr1:68325022              0.0     2.5 m          248.2 w       27.4%     9.1 m       6.6 m 
+INFO  19:28:39,365 ProgressMeter -  chr1:114257044              0.0     3.0 m          297.9 w       45.8%     6.5 m       3.5 m 
+INFO  19:29:09,393 ProgressMeter -  chr1:162678472              0.0     3.5 m          347.5 w       65.3%     5.4 m     111.0 s 
+INFO  19:29:39,402 ProgressMeter -  chr1:211257048              0.0     4.0 m          397.1 w       84.8%     4.7 m      43.0 s 
+INFO  19:30:03,840 VectorLoglessPairHMM - Time spent in setup for JNI call : 0.063117503 
+INFO  19:30:03,840 PairHMM - Total compute time in PairHMM computeLikelihoods() : 16.569901373 
+INFO  19:30:03,840 HaplotypeCaller - Ran local assembly on 690 active regions 
+INFO  19:30:04,090 ProgressMeter -            done     2.49250621E8     4.4 m            1.0 s      100.0%     4.4 m       0.0 s 
+INFO  19:30:04,091 ProgressMeter - Total runtime 264.88 secs, 4.41 min, 0.07 hours 
+INFO  19:30:04,091 MicroScheduler - 38298 reads were filtered out during the traversal out of approximately 200050 total reads (19.14%) 
+INFO  19:30:04,091 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  19:30:04,098 MicroScheduler -   -> 15044 reads (7.52% of total) failing DuplicateReadFilter 
+INFO  19:30:04,098 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  19:30:04,099 MicroScheduler -   -> 23234 reads (11.61% of total) failing HCMappingQualityFilter 
+INFO  19:30:04,099 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  19:30:04,099 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  19:30:04,099 MicroScheduler -   -> 20 reads (0.01% of total) failing NotPrimaryAlignmentFilter 
+INFO  19:30:04,100 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 2 WARN messages, the first 2 are repeated below.
+WARN  19:25:39,359 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+WARN  19:25:45,047 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper 
+------------------------------------------------------------------------------------------
+    finish variant call
+completed 2016-11-25 19:30:04

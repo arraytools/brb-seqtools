@@ -1,0 +1,71 @@
+bowtie: /opt/SeqTools/bin/bowtie2-2.2.6
+tophat: /opt/SeqTools/bin/tophat-2.1.0.Linux_x86_64
+samtools: /opt/SeqTools/bin/samtools-1.3
+HTSeq: 0.6.1p1
+bt20 2016-11-25 14:52:42
+    running read alignment
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 99010 sequences (10000010 bp)...
+[M::process] read 99010 sequences (10000010 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1, 38387, 0, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (101, 121, 150)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (3, 248)
+[M::mem_pestat] mean and std.dev: (127.12, 36.77)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 297)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 99010 reads in 9.280 CPU sec, 13.251 real sec
+[M::process] read 1980 sequences (199980 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (0, 40462, 0, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (100, 121, 151)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 253)
+[M::mem_pestat] mean and std.dev: (127.37, 37.57)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 304)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 99010 reads in 10.132 CPU sec, 14.660 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (0, 975, 0, 0)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (103, 121, 148)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (13, 238)
+[M::mem_pestat] mean and std.dev: (127.47, 34.10)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 283)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 1980 reads in 0.244 CPU sec, 0.340 real sec
+[main] Version: 0.7.12-r1039
+[main] CMD: bwa mem -t 1 -M /home/brb//testdata/hg19/chr1.fa SRR925751_1.fastq SRR925751_2.fastq
+[main] Real time: 29.642 sec; CPU: 20.376 sec
+    sorting bam file
+    indexing bam file
+    marking duplicates
+[Fri Nov 25 14:53:24 EST 2016] picard.sam.markduplicates.MarkDuplicates INPUT=[sorted.bam] OUTPUT=bt20.bam METRICS_FILE=MarkDudup.metrics    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Fri Nov 25 14:53:24 EST 2016] Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14; Picard version: 1.141(8ece590411350163e7689e9e77aab8efcb622170_1447695087) IntelDeflater
+INFO	2016-11-25 14:53:24	MarkDuplicates	Start of doWork freeMemory: 73478432; totalMemory: 75169792; maxMemory: 10379526144
+INFO	2016-11-25 14:53:24	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2016-11-25 14:53:24	MarkDuplicates	Will retain up to 39921254 data points before spilling to disk.
+WARNING	2016-11-25 14:53:25	AbstractOpticalDuplicateFinderCommandLineProgram	Default READ_NAME_REGEX '[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*' did not match read name 'SRR925751.2'.  You may need to specify a READ_NAME_REGEX in order to correctly identify optical duplicates.  Note that this message will not be emitted again even if other read names do not match the regex.
+INFO	2016-11-25 14:53:30	MarkDuplicates	Read 200050 records. 0 pairs never matched.
+INFO	2016-11-25 14:53:30	MarkDuplicates	After buildSortedReadEndLists freeMemory: 477364608; totalMemory: 821919744; maxMemory: 10379526144
+INFO	2016-11-25 14:53:30	MarkDuplicates	Will retain up to 324360192 duplicate indices before spilling to disk.
+INFO	2016-11-25 14:53:35	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2016-11-25 14:53:36	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2016-11-25 14:53:36	MarkDuplicates	Sorting list of duplicate records.
+INFO	2016-11-25 14:53:37	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3644240768; totalMemory: 6274932736; maxMemory: 10379526144
+INFO	2016-11-25 14:53:37	MarkDuplicates	Marking 16224 records as duplicates.
+INFO	2016-11-25 14:53:37	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2016-11-25 14:53:46	MarkDuplicates	Before output close freeMemory: 6238712320; totalMemory: 6274932736; maxMemory: 10379526144
+INFO	2016-11-25 14:53:46	MarkDuplicates	After output close freeMemory: 5622115480; totalMemory: 5654888448; maxMemory: 10379526144
+[Fri Nov 25 14:53:46 EST 2016] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.38 minutes.
+Runtime.totalMemory()=5654888448
+    calling variants
+Note: Neither --ploidy nor --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000
+    finish variant call
+completed 2016-11-25 14:54:32
