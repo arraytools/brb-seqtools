@@ -1,0 +1,137 @@
+bowtie: /opt/SeqTools/bin/bowtie2-2.2.6
+tophat: /opt/SeqTools/bin/tophat-2.1.0.Linux_x86_64
+samtools: /opt/SeqTools/bin/samtools-1.3
+HTSeq: 0.6.1p1
+dT_ori 2016-11-25 18:55:12
+    running read alignment
+
+[2016-11-25 18:55:12] Beginning TopHat run (v2.1.0)
+-----------------------------------------------
+[2016-11-25 18:55:12] Checking for Bowtie
+		  Bowtie version:	 2.2.6.0
+[2016-11-25 18:55:12] Checking for Bowtie index files (genome)..
+[2016-11-25 18:55:12] Checking for reference FASTA file
+	Warning: Could not find FASTA file /home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index/genome.fa
+[2016-11-25 18:55:12] Reconstituting reference FASTA file from Bowtie index
+  Executing: /opt/SeqTools/bin/bowtie2-2.2.6/bowtie2-inspect /home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index/genome > dT_ori/tmp/genome.fa
+[2016-11-25 18:55:13] Generating SAM header for /home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index/genome
+[2016-11-25 18:55:14] Reading known junctions from GTF file
+[2016-11-25 18:55:14] Preparing reads
+	 left reads: min. length=33, max. length=33, 287955 kept reads (12045 discarded)
+[2016-11-25 18:55:18] Building transcriptome data files transcriptome_data/known
+[2016-11-25 18:55:19] Building Bowtie index from known.fa
+[2016-11-25 18:55:41] Mapping left_kept_reads to transcriptome known with Bowtie2 
+[2016-11-25 18:56:02] Resuming TopHat pipeline with unmapped reads
+Warning: you have only one segment per read.
+	If the read length is greater than or equal to 45bp,
+	we strongly recommend that you decrease --segment-length to about half the read length because TopHat will work better with multiple segments
+[2016-11-25 18:56:02] Mapping left_kept_reads.m2g_um to genome genome with Bowtie2 
+[2016-11-25 18:56:14] Searching for junctions via segment mapping
+[2016-11-25 18:56:15] Retrieving sequences for splices
+[2016-11-25 18:56:16] Indexing splices
+Building a SMALL index
+[2016-11-25 18:56:17] Mapping left_kept_reads.m2g_um_unmapped to genome segment_juncs with Bowtie2 (1/1)
+[2016-11-25 18:56:18] Joining segment hits
+[2016-11-25 18:56:21] Reporting output tracks
+-----------------------------------------------
+[2016-11-25 18:56:36] A summary of the alignment counts can be found in dT_ori/align_summary.txt
+[2016-11-25 18:56:36] Run complete: 00:01:23 elapsed
+    sorting bam file
+    creating count file
+27989 GFF lines processed.
+100000 SAM alignment records processed.
+140826 SAM alignments  processed.
+    sorting bam file
+    indexing bam file
+    marking duplicates
+[Fri Nov 25 18:56:54 EST 2016] picard.sam.markduplicates.MarkDuplicates INPUT=[sorted.bam] OUTPUT=dT_ori.bam METRICS_FILE=MarkDudup.metrics    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Fri Nov 25 18:56:54 EST 2016] Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14; Picard version: 1.141(8ece590411350163e7689e9e77aab8efcb622170_1447695087) IntelDeflater
+INFO	2016-11-25 18:56:54	MarkDuplicates	Start of doWork freeMemory: 73478728; totalMemory: 75169792; maxMemory: 10379526144
+INFO	2016-11-25 18:56:54	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2016-11-25 18:56:54	MarkDuplicates	Will retain up to 39921254 data points before spilling to disk.
+WARNING	2016-11-25 18:56:55	AbstractOpticalDuplicateFinderCommandLineProgram	Default READ_NAME_REGEX '[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*' did not match read name 'SRR002051.3648107'.  You may need to specify a READ_NAME_REGEX in order to correctly identify optical duplicates.  Note that this message will not be emitted again even if other read names do not match the regex.
+INFO	2016-11-25 18:56:59	MarkDuplicates	Read 140826 records. 0 pairs never matched.
+INFO	2016-11-25 18:56:59	MarkDuplicates	After buildSortedReadEndLists freeMemory: 459754464; totalMemory: 791474176; maxMemory: 10379526144
+INFO	2016-11-25 18:56:59	MarkDuplicates	Will retain up to 324360192 duplicate indices before spilling to disk.
+INFO	2016-11-25 18:57:18	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2016-11-25 18:57:18	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2016-11-25 18:57:19	MarkDuplicates	Sorting list of duplicate records.
+INFO	2016-11-25 18:57:21	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3644748640; totalMemory: 6274940928; maxMemory: 10379526144
+INFO	2016-11-25 18:57:21	MarkDuplicates	Marking 16824 records as duplicates.
+INFO	2016-11-25 18:57:21	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2016-11-25 18:57:26	MarkDuplicates	Before output close freeMemory: 6239212784; totalMemory: 6274940928; maxMemory: 10379526144
+INFO	2016-11-25 18:57:26	MarkDuplicates	After output close freeMemory: 5622561896; totalMemory: 5654892544; maxMemory: 10379526144
+[Fri Nov 25 18:57:26 EST 2016] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.53 minutes.
+Runtime.totalMemory()=5654892544
+    calling variants
+[mpileup] 1 samples in 1 input files
+Note: Neither --ploidy nor --ploidy-file given, assuming all sites are diploid
+<mpileup> Set max per-file depth to 8000
+    finish variant call
+RH_ori 2016-11-25 18:57:41
+    running read alignment
+
+[2016-11-25 18:57:41] Beginning TopHat run (v2.1.0)
+-----------------------------------------------
+[2016-11-25 18:57:41] Checking for Bowtie
+		  Bowtie version:	 2.2.6.0
+[2016-11-25 18:57:41] Checking for Bowtie index files (transcriptome)..
+[2016-11-25 18:57:41] Checking for Bowtie index files (genome)..
+[2016-11-25 18:57:41] Checking for reference FASTA file
+	Warning: Could not find FASTA file /home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index/genome.fa
+[2016-11-25 18:57:41] Reconstituting reference FASTA file from Bowtie index
+  Executing: /opt/SeqTools/bin/bowtie2-2.2.6/bowtie2-inspect /home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index/genome > RH_ori/tmp/genome.fa
+[2016-11-25 18:57:42] Generating SAM header for /home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index/genome
+[2016-11-25 18:57:43] Reading known junctions from GTF file
+[2016-11-25 18:57:43] Preparing reads
+	 left reads: min. length=33, max. length=33, 293193 kept reads (6807 discarded)
+[2016-11-25 18:57:47] Using pre-built transcriptome data..
+[2016-11-25 18:57:48] Mapping left_kept_reads to transcriptome known with Bowtie2 
+[2016-11-25 18:58:13] Resuming TopHat pipeline with unmapped reads
+Warning: you have only one segment per read.
+	If the read length is greater than or equal to 45bp,
+	we strongly recommend that you decrease --segment-length to about half the read length because TopHat will work better with multiple segments
+[2016-11-25 18:58:13] Mapping left_kept_reads.m2g_um to genome genome with Bowtie2 
+[2016-11-25 18:58:24] Searching for junctions via segment mapping
+[2016-11-25 18:58:25] Retrieving sequences for splices
+[2016-11-25 18:58:26] Indexing splices
+Building a SMALL index
+[2016-11-25 18:58:27] Mapping left_kept_reads.m2g_um_unmapped to genome segment_juncs with Bowtie2 (1/1)
+[2016-11-25 18:58:28] Joining segment hits
+[2016-11-25 18:58:31] Reporting output tracks
+-----------------------------------------------
+[2016-11-25 18:58:49] A summary of the alignment counts can be found in RH_ori/align_summary.txt
+[2016-11-25 18:58:49] Run complete: 00:01:07 elapsed
+    sorting bam file
+    creating count file
+27989 GFF lines processed.
+100000 SAM alignment records processed.
+193363 SAM alignments  processed.
+    sorting bam file
+    indexing bam file
+    marking duplicates
+[Fri Nov 25 18:59:11 EST 2016] picard.sam.markduplicates.MarkDuplicates INPUT=[sorted.bam] OUTPUT=RH_ori.bam METRICS_FILE=MarkDudup.metrics    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Fri Nov 25 18:59:11 EST 2016] Executing as brb@ubuntu16041 on Linux 4.4.0-31-generic amd64; OpenJDK 64-Bit Server VM 1.8.0_111-8u111-b14-2ubuntu0.16.04.2-b14; Picard version: 1.141(8ece590411350163e7689e9e77aab8efcb622170_1447695087) IntelDeflater
+INFO	2016-11-25 18:59:11	MarkDuplicates	Start of doWork freeMemory: 73478864; totalMemory: 75169792; maxMemory: 10379526144
+INFO	2016-11-25 18:59:11	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2016-11-25 18:59:11	MarkDuplicates	Will retain up to 39921254 data points before spilling to disk.
+WARNING	2016-11-25 18:59:11	AbstractOpticalDuplicateFinderCommandLineProgram	Default READ_NAME_REGEX '[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*' did not match read name 'SRR002059.3625818'.  You may need to specify a READ_NAME_REGEX in order to correctly identify optical duplicates.  Note that this message will not be emitted again even if other read names do not match the regex.
+INFO	2016-11-25 18:59:15	MarkDuplicates	Read 193363 records. 0 pairs never matched.
+INFO	2016-11-25 18:59:16	MarkDuplicates	After buildSortedReadEndLists freeMemory: 461083632; totalMemory: 793829376; maxMemory: 10379526144
+INFO	2016-11-25 18:59:16	MarkDuplicates	Will retain up to 324360192 duplicate indices before spilling to disk.
+INFO	2016-11-25 18:59:35	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2016-11-25 18:59:35	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2016-11-25 18:59:35	MarkDuplicates	Sorting list of duplicate records.
+INFO	2016-11-25 18:59:38	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3644484896; totalMemory: 6274940928; maxMemory: 10379526144
+INFO	2016-11-25 18:59:38	MarkDuplicates	Marking 18575 records as duplicates.
+INFO	2016-11-25 18:59:38	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2016-11-25 18:59:48	MarkDuplicates	Before output close freeMemory: 6238949008; totalMemory: 6274940928; maxMemory: 10379526144
+INFO	2016-11-25 18:59:48	MarkDuplicates	After output close freeMemory: 5622324216; totalMemory: 5654892544; maxMemory: 10379526144
+[Fri Nov 25 18:59:48 EST 2016] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.63 minutes.
+Runtime.totalMemory()=5654892544
+    calling variants
+Note: Neither --ploidy nor --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000
+    finish variant call
+completed 2016-11-25 19:00:08

@@ -1,0 +1,13 @@
+[General]
+recentProfileName=Yeast_EnsemblEF4
+recentIndexFiles=/home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/Bowtie2Index
+recentOutputFiles=/home/brb/testdata/GSE11209/output
+recentDataTypes=rna
+recentRawDataTypes=fastq
+recentAnalyses=dgevc
+recentAligner=tophat
+recentMarkDup=yes
+recentVC=samtools
+recentGTFFiles=/home/brb/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Annotation/Genes/genes.gtf
+recentIndelReAlignment=no
+recentBQRC=no

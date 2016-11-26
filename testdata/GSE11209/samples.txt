@@ -1,0 +1,3 @@
+LibraryName	LibraryLayout	fastq1	fastq2
+dT_ori	SINGLE	SRR002051.fastq	
+RH_ori	SINGLE	SRR002059.fastq	
