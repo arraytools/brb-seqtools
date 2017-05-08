@@ -1,0 +1,13 @@
+[General]
+recentProfileName=Yeast_EnsemblEF4
+recentIndexFiles=
+recentOutputFiles=/home/brb/Downloads/testdata/GSE11209/output_subread
+recentDataTypes=rna
+recentRawDataTypes=fastq
+recentAnalyses=dgevc
+recentAligner=subread
+recentMarkDup=yes
+recentVC=samtools
+recentGTFFiles=/home/brb/Downloads/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Annotation/Genes/genes.gtf
+recentIndelReAlignment=no
+recentBQRC=no

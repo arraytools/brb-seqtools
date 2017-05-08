@@ -1,0 +1,358 @@
+bowtie: /opt/SeqTools/bin/bowtie2-2.2.9
+tophat: /opt/SeqTools/bin/tophat-2.1.1.Linux_x86_64
+samtools: /opt/SeqTools/bin/samtools-1.4
+HTSeq: 0.6.1p1
+dT_ori 2017-05-08 09:05:28
+    (2017-05-08 09:05:28) creating Subread index
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.2
+
+//=========================== indexBuilder setting ===========================\\
+||                                                                            ||
+||                Index name : Subreadindex/Subreadindex                      ||
+||               Index space : base-space                                     ||
+||                    Memory : 8000 Mbytes                                    ||
+||          Repeat threshold : 100 repeats                                    ||
+||  Distance to next subread : 3                                              ||
+||                                                                            ||
+||               Input files : 1 file in total                                ||
+||                             o /home/brb/Downloads/testdata/Saccharomyc ... ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Check the integrity of provided reference sequences ...                    ||
+|| No format issues were found                                                ||
+|| Scan uninformative subreads in reference sequences ...                     ||
+||    8%,   0 mins elapsed, rate=2570.8k bps/s, total=12m                     ||
+||   16%,   0 mins elapsed, rate=4405.5k bps/s, total=12m                     ||
+||   24%,   0 mins elapsed, rate=5769.7k bps/s, total=12m                     ||
+||   33%,   0 mins elapsed, rate=6815.2k bps/s, total=12m                     ||
+||   41%,   0 mins elapsed, rate=7635.1k bps/s, total=12m                     ||
+||   49%,   0 mins elapsed, rate=8267.0k bps/s, total=12m                     ||
+||   58%,   0 mins elapsed, rate=8819.2k bps/s, total=12m                     ||
+||   66%,   0 mins elapsed, rate=9231.5k bps/s, total=12m                     ||
+||   74%,   0 mins elapsed, rate=9559.8k bps/s, total=12m                     ||
+||   83%,   0 mins elapsed, rate=9897.3k bps/s, total=12m                     ||
+||   91%,   0 mins elapsed, rate=10238.4k bps/s, total=12m                    ||
+|| 4 uninformative subreads were found.                                       ||
+|| These subreads were excluded from index building.                          ||
+|| Build the index...                                                         ||
+||    8%,   0 mins elapsed, rate=1763.0k bps/s, total=12m                     ||
+||   16%,   0 mins elapsed, rate=2198.0k bps/s, total=12m                     ||
+||   24%,   0 mins elapsed, rate=2658.3k bps/s, total=12m                     ||
+||   33%,   0 mins elapsed, rate=3086.5k bps/s, total=12m                     ||
+||   41%,   0 mins elapsed, rate=3475.2k bps/s, total=12m                     ||
+||   49%,   0 mins elapsed, rate=3822.3k bps/s, total=12m                     ||
+||   58%,   0 mins elapsed, rate=4125.5k bps/s, total=12m                     ||
+||   66%,   0 mins elapsed, rate=4395.9k bps/s, total=12m                     ||
+||   74%,   0 mins elapsed, rate=4636.8k bps/s, total=12m                     ||
+||   91%,   0 mins elapsed, rate=5040.7k bps/s, total=12m                     ||
+||   99%,   0 mins elapsed, rate=5212.0k bps/s, total=12m                     ||
+|| Save current index block...                                                ||
+||  [ 0.0% finished ]                                                         ||
+||  [ 10.0% finished ]                                                        ||
+||  [ 20.0% finished ]                                                        ||
+||  [ 30.0% finished ]                                                        ||
+||  [ 40.0% finished ]                                                        ||
+||  [ 50.0% finished ]                                                        ||
+||  [ 60.0% finished ]                                                        ||
+||  [ 70.0% finished ]                                                        ||
+||  [ 80.0% finished ]                                                        ||
+||  [ 90.0% finished ]                                                        ||
+||  [ 100.0% finished ]                                                       ||
+||                                                                            ||
+||                      Total running time: 0.1 minutes.                      ||
+||          Index Subreadindex/Subreadindex was successfully built!           ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+    (2017-05-08 09:05:33) running read alignment
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.2
+
+//============================= subjunc setting ==============================\\
+||                                                                            ||
+|| Function      : Read alignment + Junction detection (RNA-Seq)              ||
+|| Input file    : SRR002051.fastq                                            ||
+|| Output file   : dT_ori/accepted_hits_subjunc.bam (BAM)                     ||
+|| Index name    : Subreadindex/Subreadindex                                  ||
+||                                                                            ||
+||                    ------------------------------------                    ||
+||                                                                            ||
+||                       Threads : 11                                         ||
+||                  Phred offset : 33                                         ||
+||                     Min votes : 1 / 14                                     ||
+||    Maximum allowed mismatches : 3                                          ||
+||   Maximum allowed indel bases : 5                                          ||
+|| # of best alignments reported : 1                                          ||
+||                Unique mapping : no                                         ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================= Running (08-May-2017 09:05:33, pid=1312) =================\\
+||                                                                            ||
+|| The input file contains base space reads.                                  ||
+|| The range of Phred scores observed in the data is [0,40]                   ||
+|| Load the 1-th index block...                                               ||
+||   23% completed, 0.0 mins elapsed, rate=110.7k reads per second            ||
+||   29% completed, 0.0 mins elapsed, rate=110.9k reads per second            ||
+||   36% completed, 0.0 mins elapsed, rate=110.9k reads per second            ||
+||   43% completed, 0.0 mins elapsed, rate=110.9k reads per second            ||
+||   49% completed, 0.0 mins elapsed, rate=111.0k reads per second            ||
+||   56% completed, 0.0 mins elapsed, rate=110.9k reads per second            ||
+||   63% completed, 0.0 mins elapsed, rate=111.0k reads per second            ||
+||   72% completed, 0.1 mins elapsed, rate=60.7k reads per second             ||
+||   78% completed, 0.1 mins elapsed, rate=56.9k reads per second             ||
+||   84% completed, 0.1 mins elapsed, rate=54.3k reads per second             ||
+||   91% completed, 0.1 mins elapsed, rate=52.5k reads per second             ||
+||   97% completed, 0.1 mins elapsed, rate=50.8k reads per second             ||
+||                                                                            ||
+||                          Completed successfully.                           ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Summary ==================================\\
+||                                                                            ||
+||          Processed : 300,000 reads                                         ||
+||             Mapped : 173,910 reads (58.0%)                                 ||
+||          Junctions : 0                                                     ||
+||             Indels : 62                                                    ||
+||                                                                            ||
+||       Running time : 0.1 minutes                                           ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+    (2017-05-08 09:05:40) creating count file
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.2
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                           S accepted_hits_subjunc.bam                      ||
+||                                                                            ||
+||             Output file : /home/brb/Downloads/testdata/GSE11209/output ... ||
+||                 Summary : /home/brb/Downloads/testdata/GSE11209/output ... ||
+||              Annotation : /home/brb/Downloads/testdata/Saccharomyces_c ... ||
+||      Dir for temp files : /home/brb/Downloads/testdata/GSE11209/output ... ||
+||                                                                            ||
+||                 Threads : 11                                               ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : no                                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file /home/brb/Downloads/testdata/Saccharomyces_cerevi ... ||
+||    Features : 7553                                                         ||
+||    Meta-features : 7126                                                    ||
+||    Chromosomes/contigs : 17                                                ||
+||                                                                            ||
+|| Process BAM file accepted_hits_subjunc.bam...                              ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 300000                                                    ||
+||    Successfully assigned reads : 117552 (39.2%)                            ||
+||    Running time : 0.01 minutes                                             ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/home/brb/Downloads/tes  ||
+|| tdata/GSE11209/output_subread/dT_ori.count"                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+    (2017-05-08 09:05:40) sorting bam file
+    (2017-05-08 09:05:41) indexing bam file
+    (2017-05-08 09:05:41) marking duplicates
+[Mon May 08 09:05:41 EDT 2017] picard.sam.markduplicates.MarkDuplicates INPUT=[sorted.bam] OUTPUT=dT_ori.bam METRICS_FILE=MarkDudup.metrics    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Mon May 08 09:05:41 EDT 2017] Executing as brb@T3600 on Linux 3.16.0-38-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 2.1.1(6a5237c0f295ddce209ee3a3a5b83a3779408b1b_1457101272) IntelDeflater
+INFO	2017-05-08 09:05:42	MarkDuplicates	Start of doWork freeMemory: 1006087008; totalMemory: 1012924416; maxMemory: 9544663040
+INFO	2017-05-08 09:05:42	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2017-05-08 09:05:42	MarkDuplicates	Will retain up to 36710242 data points before spilling to disk.
+WARNING	2017-05-08 09:05:42	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: SRR002051.3768702. Cause: String 'SRR002051.3768702' did not start with a parsable number.
+INFO	2017-05-08 09:05:43	MarkDuplicates	Read 173910 records. 0 pairs never matched.
+INFO	2017-05-08 09:05:43	MarkDuplicates	After buildSortedReadEndLists freeMemory: 958590008; totalMemory: 1277165568; maxMemory: 9544663040
+INFO	2017-05-08 09:05:43	MarkDuplicates	Will retain up to 298270720 duplicate indices before spilling to disk.
+INFO	2017-05-08 09:05:47	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2017-05-08 09:05:47	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2017-05-08 09:05:47	MarkDuplicates	Sorting list of duplicate records.
+INFO	2017-05-08 09:05:47	MarkDuplicates	After generateDuplicateIndexes freeMemory: 1265251088; totalMemory: 3663724544; maxMemory: 9544663040
+INFO	2017-05-08 09:05:47	MarkDuplicates	Marking 35182 records as duplicates.
+INFO	2017-05-08 09:05:47	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2017-05-08 09:05:49	MarkDuplicates	Before output close freeMemory: 3651111728; totalMemory: 3663724544; maxMemory: 9544663040
+INFO	2017-05-08 09:05:49	MarkDuplicates	After output close freeMemory: 3651176920; totalMemory: 3663724544; maxMemory: 9544663040
+[Mon May 08 09:05:49 EDT 2017] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.12 minutes.
+Runtime.totalMemory()=3663724544
+    (2017-05-08 09:05:49) calling variants
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000
+    (2017-05-08 09:05:57) finish variant call
+RH_ori 2017-05-08 09:05:57
+    (2017-05-08 09:05:57) running read alignment
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.2
+
+//============================= subjunc setting ==============================\\
+||                                                                            ||
+|| Function      : Read alignment + Junction detection (RNA-Seq)              ||
+|| Input file    : SRR002059.fastq                                            ||
+|| Output file   : RH_ori/accepted_hits_subjunc.bam (BAM)                     ||
+|| Index name    : Subreadindex/Subreadindex                                  ||
+||                                                                            ||
+||                    ------------------------------------                    ||
+||                                                                            ||
+||                       Threads : 11                                         ||
+||                  Phred offset : 33                                         ||
+||                     Min votes : 1 / 14                                     ||
+||    Maximum allowed mismatches : 3                                          ||
+||   Maximum allowed indel bases : 5                                          ||
+|| # of best alignments reported : 1                                          ||
+||                Unique mapping : no                                         ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================= Running (08-May-2017 09:05:57, pid=1448) =================\\
+||                                                                            ||
+|| The input file contains base space reads.                                  ||
+|| The range of Phred scores observed in the data is [0,40]                   ||
+|| Load the 1-th index block...                                               ||
+||   22% completed, 0.0 mins elapsed, rate=111.3k reads per second            ||
+||   29% completed, 0.0 mins elapsed, rate=111.6k reads per second            ||
+||   36% completed, 0.0 mins elapsed, rate=111.6k reads per second            ||
+||   42% completed, 0.0 mins elapsed, rate=111.7k reads per second            ||
+||   49% completed, 0.0 mins elapsed, rate=111.7k reads per second            ||
+||   56% completed, 0.0 mins elapsed, rate=111.7k reads per second            ||
+||   62% completed, 0.0 mins elapsed, rate=111.8k reads per second            ||
+||   72% completed, 0.1 mins elapsed, rate=60.1k reads per second             ||
+||   78% completed, 0.1 mins elapsed, rate=56.2k reads per second             ||
+||   85% completed, 0.1 mins elapsed, rate=53.4k reads per second             ||
+||   91% completed, 0.1 mins elapsed, rate=52.0k reads per second             ||
+||   97% completed, 0.1 mins elapsed, rate=50.2k reads per second             ||
+||                                                                            ||
+||                          Completed successfully.                           ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Summary ==================================\\
+||                                                                            ||
+||          Processed : 300,000 reads                                         ||
+||             Mapped : 186,819 reads (62.3%)                                 ||
+||          Junctions : 0                                                     ||
+||             Indels : 73                                                    ||
+||                                                                            ||
+||       Running time : 0.1 minutes                                           ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+    (2017-05-08 09:06:04) creating count file
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v1.5.2
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                           S accepted_hits_subjunc.bam                      ||
+||                                                                            ||
+||             Output file : /home/brb/Downloads/testdata/GSE11209/output ... ||
+||                 Summary : /home/brb/Downloads/testdata/GSE11209/output ... ||
+||              Annotation : /home/brb/Downloads/testdata/Saccharomyces_c ... ||
+||      Dir for temp files : /home/brb/Downloads/testdata/GSE11209/output ... ||
+||                                                                            ||
+||                 Threads : 11                                               ||
+||                   Level : meta-feature level                               ||
+||              Paired-end : no                                               ||
+||         Strand specific : no                                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : not counted                                      ||
+||   Min overlapping bases : 1                                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file /home/brb/Downloads/testdata/Saccharomyces_cerevi ... ||
+||    Features : 7553                                                         ||
+||    Meta-features : 7126                                                    ||
+||    Chromosomes/contigs : 17                                                ||
+||                                                                            ||
+|| Process BAM file accepted_hits_subjunc.bam...                              ||
+||    Single-end reads are included.                                          ||
+||    Assign reads to features...                                             ||
+||    Total reads : 300000                                                    ||
+||    Successfully assigned reads : 130364 (43.5%)                            ||
+||    Running time : 0.01 minutes                                             ||
+||                                                                            ||
+||                         Read assignment finished.                          ||
+||                                                                            ||
+|| Summary of counting results can be found in file "/home/brb/Downloads/tes  ||
+|| tdata/GSE11209/output_subread/RH_ori.count"                                ||
+||                                                                            ||
+\\===================== http://subread.sourceforge.net/ ======================//
+
+    (2017-05-08 09:06:04) sorting bam file
+    (2017-05-08 09:06:05) indexing bam file
+    (2017-05-08 09:06:05) marking duplicates
+[Mon May 08 09:06:05 EDT 2017] picard.sam.markduplicates.MarkDuplicates INPUT=[sorted.bam] OUTPUT=RH_ori.bam METRICS_FILE=MarkDudup.metrics    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag REMOVE_DUPLICATES=false ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Mon May 08 09:06:05 EDT 2017] Executing as brb@T3600 on Linux 3.16.0-38-generic amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_131-b11; Picard version: 2.1.1(6a5237c0f295ddce209ee3a3a5b83a3779408b1b_1457101272) IntelDeflater
+INFO	2017-05-08 09:06:05	MarkDuplicates	Start of doWork freeMemory: 1006086544; totalMemory: 1012924416; maxMemory: 9544663040
+INFO	2017-05-08 09:06:05	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2017-05-08 09:06:05	MarkDuplicates	Will retain up to 36710242 data points before spilling to disk.
+WARNING	2017-05-08 09:06:05	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: SRR002059.3651726. Cause: String 'SRR002059.3651726' did not start with a parsable number.
+INFO	2017-05-08 09:06:07	MarkDuplicates	Read 186819 records. 0 pairs never matched.
+INFO	2017-05-08 09:06:07	MarkDuplicates	After buildSortedReadEndLists freeMemory: 957660528; totalMemory: 1277165568; maxMemory: 9544663040
+INFO	2017-05-08 09:06:07	MarkDuplicates	Will retain up to 298270720 duplicate indices before spilling to disk.
+INFO	2017-05-08 09:06:10	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2017-05-08 09:06:10	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2017-05-08 09:06:10	MarkDuplicates	Sorting list of duplicate records.
+INFO	2017-05-08 09:06:11	MarkDuplicates	After generateDuplicateIndexes freeMemory: 1265251056; totalMemory: 3663724544; maxMemory: 9544663040
+INFO	2017-05-08 09:06:11	MarkDuplicates	Marking 37045 records as duplicates.
+INFO	2017-05-08 09:06:11	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2017-05-08 09:06:13	MarkDuplicates	Before output close freeMemory: 3651107424; totalMemory: 3663724544; maxMemory: 9544663040
+INFO	2017-05-08 09:06:13	MarkDuplicates	After output close freeMemory: 3651172616; totalMemory: 3663724544; maxMemory: 9544663040
+[Mon May 08 09:06:13 EDT 2017] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.13 minutes.
+Runtime.totalMemory()=3663724544
+    (2017-05-08 09:06:13) calling variants
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000
+    (2017-05-08 09:06:23) finish variant call
+completed 2017-05-08 09:06:23

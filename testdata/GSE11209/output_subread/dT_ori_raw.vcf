@@ -1,0 +1,54 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##samtoolsVersion=1.4+htslib-1.4
+##samtoolsCommand=samtools mpileup -uf /home/brb/Downloads/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/WholeGenomeFasta/genome.fa dT_ori.bam
+##reference=file:///home/brb/Downloads/testdata/Saccharomyces_cerevisiae/Ensembl/EF4/Sequence/WholeGenomeFasta/genome.fa
+##contig=<ID=I,length=230218>
+##contig=<ID=II,length=813184>
+##contig=<ID=III,length=316620>
+##contig=<ID=IV,length=1531933>
+##contig=<ID=IX,length=439888>
+##contig=<ID=MT,length=85779>
+##contig=<ID=V,length=576874>
+##contig=<ID=VI,length=270161>
+##contig=<ID=VII,length=1090940>
+##contig=<ID=VIII,length=562643>
+##contig=<ID=X,length=745751>
+##contig=<ID=XI,length=666816>
+##contig=<ID=XII,length=1078177>
+##contig=<ID=XIII,length=924431>
+##contig=<ID=XIV,length=784333>
+##contig=<ID=XV,length=1091291>
+##contig=<ID=XVI,length=948066>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPB,Number=1,Type=Float,Description="Mann-Whitney U test of Read Position Bias (bigger is better)">
+##INFO=<ID=MQB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality Bias (bigger is better)">
+##INFO=<ID=BQB,Number=1,Type=Float,Description="Mann-Whitney U test of Base Quality Bias (bigger is better)">
+##INFO=<ID=MQSB,Number=1,Type=Float,Description="Mann-Whitney U test of Mapping Quality vs Strand Bias (bigger is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric.">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=ICB,Number=1,Type=Float,Description="Inbreeding Coefficient Binomial test (bigger is better)">
+##INFO=<ID=HOB,Number=1,Type=Float,Description="Bias in the number of HOMs number (smaller is better)">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Average mapping quality">
+##bcftools_callVersion=1.4+htslib-1.4
+##bcftools_callCommand=call -vmO v -o /home/brb/Downloads/testdata/GSE11209/output_subread/dT_ori_raw.vcf; Date=Mon May  8 09:05:49 2017
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	dT_ori.bam
+II	59755	.	T	C	99	.	DP=13;VDB=0.560775;SGB=-0.680642;MQSB=0.334869;MQ0F=0;AC=2;AN=2;DP4=0,0,3,9;MQ=18	GT:PL	1/1:129,36,0
+II	88491	.	AGAAGA	A	107	.	INDEL;IDV=16;IMF=1;DP=16;VDB=0.0255252;SGB=-0.662043;MQSB=0.857143;MQ0F=0;AC=2;AN=2;DP4=0,0,7,2;MQ=23	GT:PL	1/1:137,27,0
+III	57070	.	A	AA	23.434	.	INDEL;IDV=10;IMF=0.454545;DP=22;VDB=6.87782e-05;SGB=-0.670168;MQ0F=0;AC=2;AN=2;DP4=0,0,10,0;MQ=13	GT:PL	1/1:53,30,0
+III	162694	.	G	A	75	.	DP=8;VDB=0.366715;SGB=-0.636426;MQSB=0.810265;MQ0F=0;AC=2;AN=2;DP4=0,0,4,3;MQ=19	GT:PL	1/1:105,21,0
+IV	230320	.	G	C	11.7172	.	DP=4;VDB=0.0279572;SGB=-0.511536;MQSB=1;MQ0F=0;AC=2;AN=2;DP4=0,0,1,2;MQ=17	GT:PL	1/1:41,9,0
+VII	479945	.	G	T	7.30814	.	DP=2;VDB=0.36;SGB=-0.453602;MQ0F=0;AC=2;AN=2;DP4=0,0,2,0;MQ=20	GT:PL	1/1:36,6,0
+VII	921119	.	G	A	10.7923	.	DP=2;VDB=0.22;SGB=-0.453602;MQSB=1;MQ0F=0;AC=2;AN=2;DP4=0,0,1,1;MQ=20	GT:PL	1/1:40,6,0
+XI	618742	.	C	G	7.30814	.	DP=3;VDB=0.02;SGB=-0.453602;MQ0F=0;AC=2;AN=2;DP4=0,0,0,2;MQ=20	GT:PL	1/1:36,6,0
+XVI	795394	.	G	A	50	.	DP=8;VDB=0.000118837;SGB=-0.651104;MQSB=0.62023;MQ0F=0;AC=2;AN=2;DP4=0,0,4,4;MQ=13	GT:PL	1/1:80,24,0
